@@ -1,0 +1,122 @@
+﻿@model WarZone.ViewModel.AllDataModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">WARZONE CLASS GENERATOR</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building a class that will challenge yourself</a>.</p>
+
+        <!--Button-->
+        <input type="button" class="btn btn-made1" value="GENERATE CLASS" onclick="location.href='@Url.Action("List", "Home")'" />
+
+        <br />
+        <div style="float:left; padding-top: 10px;">
+            <p>Popular WarZone Weapons Season 5</p>
+        </div>
+        <br />
+        <hr/>
+
+
+        <div class="card-columns" style="margin-top:30px; ">
+
+            @foreach (var p in Model.Primary)
+            {
+                switch (p.Id)
+                {
+                    case 1:
+                        //Defines the card style
+                        <div class="card" style="border: none;">
+                            <h5 class="card-title">@p.Name</h5>
+                            <!--Adds a card image element to the card and sets the link-->
+                            <div class="card-img" style="width: 350px; height: 150px;">
+                                <img src="@p.Image" class="img-thumbnail">
+                            </div>
+                            <!--Adds the body element to the card-->
+
+
+
+                        </div>
+                        break;
+
+                    case 2:
+                        //Defines the card style
+                        <div class="card" style="border: none;">
+                            <h5 class="card-title">@p.Name</h5>
+                            <!--Adds a card image element to the card and sets the link-->
+                            <div class="card-img" style="width: 350px;">
+                                <img src="@p.Image" class="img-thumbnail">
+
+                            </div>
+                            <!--Adds the body element to the card-->
+
+
+
+                        </div>
+                        break;
+
+                    case 3:
+                        //Defines the card style
+                        <div class="card" style="border: none;">
+                            <h5 class="card-title">@p.Name</h5>
+                            <!--Adds a card image element to the card and sets the link-->
+                            <div class="card-img" style="width: 350px; height: 150px;">
+                                <img src="@p.Image" class="img-thumbnail">
+                            </div>
+                            <!--Adds the body element to the card-->
+
+
+
+                        </div>
+                        break;
+
+                    case 8:
+                        //Defines the card style
+                        <div class="card" style="border: none;">
+                            <h5 class="card-title">@p.Name</h5>
+                            <!--Adds a card image element to the card and sets the link-->
+                            <div class="card-img" style="width: 350px; height: 150px;">
+                                <img src="@p.Image" class="img-thumbnail">
+                            </div>
+                            <!--Adds the body element to the card-->
+
+
+
+                        </div>
+                        break;
+
+                    case 12:
+                        //Defines the card style
+                        <div class="card" style="border: none;">
+                            <h5 class="card-title">@p.Name</h5>
+                            <!--Adds a card image element to the card and sets the link-->
+                            <div class="card-img" style="width: 350px; height: 150px;">
+                                <img src="@p.Image" class="img-thumbnail">
+                            </div>
+                            <!--Adds the body element to the card-->
+
+
+
+                        </div>
+                        break;
+
+                    case 13:
+                        //Defines the card style
+                        <div class="card" style="border: none;">
+                            <h5 class="card-title">@p.Name</h5>
+                            <!--Adds a card image element to the card and sets the link-->
+                            <div class="card-img" style="width: 350px; height: 150px;">
+                                <img src="@p.Image" class="img-thumbnail">
+                            </div>
+                            <!--Adds the body element to the card-->
+
+
+
+                        </div>
+                        break;
+
+                }
+            }
+        </div>
+    </div>
+

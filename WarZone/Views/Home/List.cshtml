@@ -1,0 +1,113 @@
+﻿@model WarZone.ViewModel.SingleModel;
+
+@{
+    ViewData["Title"] = "List";
+}
+
+
+    <div>
+        <h4>WarZone Class</h4>
+        <hr />
+
+        <!--Weapons-->
+        <div class="row">
+            <div class="col-6">Primary Weapon</div>
+            <div class="col-6">Secondary Weapon</div>
+        </div>
+
+        <dl class="row">
+
+            <dd class="col-6">
+                @Html.DisplayFor(model => model.PriName)
+                <div>
+                    <img src="@Model.PriImage" class="img-thumbnail">
+
+                </div>
+            </dd>
+
+
+
+            <dd class="col-6">
+                @Html.DisplayFor(model => model.SecName)
+                <div>
+                    <img src="@Model.SecImage" class="img-thumbnail">
+
+                </div>
+            </dd>
+
+
+
+
+        </dl>
+
+
+        <!--Perks-->
+        <div class="row">
+            <div class="col-6 col-md-4">Perk 1</div>
+            <div class="col-6 col-md-4">Perk 2</div>
+            <div class="col-6 col-md-4">Perk 3</div>
+        </div>
+
+        <dl class="row">
+            @foreach (var p in Model.perks)
+            {
+
+                <dd class="col-6 col-md-4">
+                    <p>@p.Name</p>
+                    <div>
+                        <img src="@p.Image" class="img-thumbnail" style="width:300px; height:150px">
+
+                    </div>
+                </dd>
+            }
+
+        </dl>
+
+
+        <!--Other-->
+        <div class="row">
+            <div class="col-4">Tactical</div>
+            <div class="col-4">Lethal</div>
+        </div>
+
+        <dl class="row">
+
+            <dd class="col-4">
+                @Html.DisplayFor(model => model.TecName)
+                <div>
+                    <img src="@Model.TecImage" class="img-thumbnail" style="width:300px; height:150px">
+
+                </div>
+            </dd>
+
+
+
+            <dd class="col-4">
+                @Html.DisplayFor(model => model.LethName)
+                <div>
+                    <img src="@Model.LethImage" class="img-thumbnail" style="width:300px; height:150px">
+
+                </div>
+            </dd>
+
+
+
+
+        </dl>
+
+
+
+        
+        <hr />
+        <input type="button" class="btn btn-made1" value="REGENERATE CLASS" onclick="location.href='@Url.Action("List", "Home")'" />
+
+
+
+
+
+
+
+
+
+    </div>
+
